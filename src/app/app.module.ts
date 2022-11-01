@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './compinents/signup/signup.component';
-import { SigninComponent } from './compinents/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { PrivateComponent } from './components/private/private.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
