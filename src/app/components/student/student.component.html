@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <h6>Enter the details of users below to register them</h6>
+  <div class="row">
+      <div class="col-sm-6" style="background-color:#302b63;">
+          <br>
+          <label><h6 style="color: #fff; font-weight: bold; cursor: pointer; display: flex;">Name:</h6></label>
+          <input type="text" [(ngModel)] = "FirstName" class="form-control" [ngStyle] = "{
+              'border-color': id == '' ? 'red' : '#70C770'
+          }">
+          <br>
+          <label><h6 style="color: #fff; font-weight: bold; cursor: pointer; display: flex;">Document:</h6></label>
+          <input type="text" [(ngModel)] = "Document" class="form-control" [ngStyle] = "{
+              'border-color': Document == '' ? 'red' : '#70C770'
+          }">
+          <br>
+          <label><h6 style="color: #fff; font-weight: bold; cursor: pointer; display: flex;">Document Type:</h6></label>
+          <input type="text" [(ngModel)] = "DocumentType" class="form-control" [ngStyle] = "{
+              'border-color': DocumentType == '' ? 'red' : '#70C770'
+          }">
+          <br>
+          <label><h6 style="color: #fff; font-weight: bold; cursor: pointer; display: flex;">FirstName:</h6></label>
+          <input type="text" [(ngModel)] = "FirstName" class="form-control" [ngStyle] = "{
+              'border-color': FirstName == '' ? 'red' : '#70C770'
+          }">
+          <br>
+          <label><h6 style="color: #fff; font-weight: bold; cursor: pointer; display: flex;">LastName</h6></label>
+          <input type="text" [(ngModel)] = "LastName" class="form-control" [ngStyle] = "{
+              'border-color': LastName == '' ? 'red' : '#70C770'
+          }">
+          <br>
+          <label><h6 style="color: #fff; font-weight: bold; cursor: pointer; display: flex;">Date of Birth:</h6></label>
+          <input type="text" [(ngModel)] = "state" class="form-control" [ngStyle] = "{
+              'border-color': state == '' ? 'red' : '#70C770'
+          }">
+          <br>
+          <button (click) = "addStudent()" class = "btn btn-primary btn-sm">Submit</button>
+          <br>
+          <br>
+      </div>
+      <div class="col-sm-6">
+          <table class="table table-striped">
+              <thead>
+                  <tr>
+                      <th>id</th>
+                      <th>Document</th>
+                      <th>DocumentType</th>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>state</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor = "let student of students">
+                      <td>{{ student.id }}</td>
+                      <td>{{ student.Document }}</td>
+                      <td>{{ student.DocumentType }}</td>
+                      <td>{{ student.FirstName  }}</td>
+                      <td>{{ student.LastName }}</td>
+                  </tr>
+                  <tr>
+                      <td>{{ id  }}</td>
+                      <td>{{ Document  }}</td>
+                      <td>{{ DocumentType }}</td>
+                      <td>{{ FirstName  }}</td>
+                      <td>{{ LastName }}</td>
+                      <td>{{state }}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
